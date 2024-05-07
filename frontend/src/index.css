@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'GraphikRegular';
+  src:
+    local('GraphikRegular'),
+    url(../public/assets/fonts/GraphikRegular.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'GraphikSemiBold';
+  src:
+    local('GraphikSemiBold'),
+    url(../public/assets/fonts/GraphikSemibold.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'GraphikMedium';
+  src:
+    local('GraphikMedium'),
+    url(../public/assets/fonts/GraphikMedium.otf) format('truetype');
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0px;
+}

@@ -1,0 +1,30 @@
+server:
+  port: 9092
+
+spring:
+  datasource:
+    url: jdbc:mysql://13.58.64.90:30001/minet_bc_128_crypto
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Bootcamp@128!
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+      format_sql: true
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+  application:
+    name: CRYPTO-SERVICE
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      instanceInfoReplicationIntervalSeconds: 10
+geckoUrl : https://api.coingecko.com/api/v3/coins/markets

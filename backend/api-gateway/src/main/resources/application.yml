@@ -1,0 +1,55 @@
+secret:
+  id: fafc32a5fbfbbc900cf423a70724c324302c1eccbf5f998ef4485895e43c44d5
+server:
+  port:
+    9191
+spring:
+  application:
+    name:
+      API-GATEWAY
+  main:
+    web-application-type: reactive
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - PATCH
+      routes:
+        - id: USER-SERVICE
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/api/v1/users/**
+        - id: CRYPTO-SERVICE
+          uri: lb://CRYPTO-SERVICE
+          predicates:
+            - Path=/api/v1/cryptos/**,/api/v1/watchlists/**,/api/v1/holdings/**
+        - id: PORTFOLIO-SERVICE
+          uri: lb://PORTFOLIO-SERVICE
+          predicates:
+            - Path=/api/v1/transactions/**
+        - id: WALLET-SERVICE
+          uri: lb://WALLET-SERVICE
+          predicates:
+            - Path=/api/v1/wallets/**
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    instance: localhost

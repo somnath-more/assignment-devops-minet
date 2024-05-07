@@ -1,0 +1,422 @@
+{
+  "users": [
+    {
+      "fullName": "j",
+      "email": "j@gmail.com",
+      "password": "Abcd@1234",
+      "id": 1
+    },
+    {
+      "fullName": "John Doe",
+      "email": "john@gmail.com",
+      "password": "Johnn@151",
+      "id": 2
+    },
+    {
+      "fullName": "Priya",
+      "email": "priya@gmail.com",
+      "password": "Priya@151",
+      "id": 3
+    }
+  ],
+  "watchlists": [
+    {
+      "user": 2,
+      "crypto": 1,
+      "id": 1
+    },
+    {
+      "user": 2,
+      "crypto": 2,
+      "id": 2
+    },
+    {
+      "user": 2,
+      "crypto": 4,
+      "id": 3
+    },
+    {
+      "user": 3,
+      "crypto": 1,
+      "id": 4
+    },
+    {
+      "user": 3,
+      "crypto": 2,
+      "id": 5
+    },
+    {
+      "user": 3,
+      "crypto": 4,
+      "id": 6
+    }
+  ],
+  "holdings": [
+    {
+      "userId": 1,
+      "cryptoId": 1,
+      "amount": 2864.87,
+      "quantity": 0.0005676,
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "cryptoId": 1,
+      "amount": 10900,
+      "quantity": 0.0030132,
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "cryptoId": 2,
+      "amount": 7643.1,
+      "quantity": 0.022838075,
+      "id": 3,
+      "price": null
+    },
+    {
+      "userId": 3,
+      "cryptoId": 1,
+      "amount": 13963.68,
+      "quantity": 0.004533832,
+      "id": 4,
+      "price": null
+    }
+  ],
+  "wallets": [
+    {
+      "userId": 1,
+      "amount": 3786.239999999998,
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "amount": 17121.48,
+      "id": 2
+    },
+    {
+      "userId": 3,
+      "amount": 10306.419999999998,
+      "id": 3
+    }
+  ],
+  "transactions": [
+    {
+      "amount": 10570,
+      "quantity": 0.0029128,
+      "transactionType": "PURCHASED",
+      "transactionStatus": "success",
+      "coinName": "Bitcoin",
+      "transactionDate": "2023-11-13",
+      "receiverName": "xyz",
+      "userId": 1,
+      "cryptoId": 1,
+      "id": 1
+    },
+    {
+      "amount": 6383.2,
+      "quantity": 0.0016384,
+      "transactionType": "PURCHASED",
+      "transactionStatus": "success",
+      "coinName": "Bitcoin",
+      "transactionDate": "2023-11-13",
+      "receiverName": "xyz",
+      "userId": 1,
+      "cryptoId": 1,
+      "id": 2
+    },
+    {
+      "amount": 3888.42,
+      "quantity": 0.0008791,
+      "transactionType": "PURCHASED",
+      "transactionStatus": "success",
+      "coinName": "Bitcoin",
+      "transactionDate": "2023-11-13",
+      "receiverName": "xyz",
+      "userId": 1,
+      "cryptoId": 1,
+      "id": 3
+    },
+    {
+      "amount": 4890.68,
+      "quantity": 0.0011842,
+      "transactionType": "PURCHASED",
+      "transactionStatus": "success",
+      "coinName": "Bitcoin",
+      "transactionDate": "2023-11-13",
+      "receiverName": "xyz",
+      "userId": 1,
+      "cryptoId": 1,
+      "id": 4
+    },
+    {
+      "amount": 3471.02,
+      "quantity": 0.0007521,
+      "transactionType": "PURCHASED",
+      "transactionStatus": "success",
+      "coinName": "Bitcoin",
+      "transactionDate": "2023-11-13",
+      "receiverName": "xyz",
+      "userId": 1,
+      "cryptoId": 1,
+      "id": 5
+    },
+    {
+      "amount": 2176.97,
+      "quantity": 0.0003582,
+      "transactionType": "PURCHASED",
+      "transactionStatus": "success",
+      "coinName": "Bitcoin",
+      "transactionDate": "2023-11-13",
+      "receiverName": "xyz",
+      "userId": 1,
+      "cryptoId": 1,
+      "id": 6
+    },
+    {
+      "amount": 1469.72,
+      "quantity": 0.000143,
+      "transactionType": "PURCHASED",
+      "transactionStatus": "success",
+      "coinName": "Bitcoin",
+      "transactionDate": "2023-11-13",
+      "receiverName": "xyz",
+      "userId": 1,
+      "cryptoId": 1,
+      "id": 7
+    },
+    {
+      "amount": 1069,
+      "quantity": 0.000021,
+      "transactionType": "Purchased",
+      "transactionStatus": "success",
+      "coinName": "Bitcoin",
+      "transactionDate": "2023-11-13",
+      "receiverName": "xyz",
+      "userId": 1,
+      "cryptoId": 1,
+      "id": 8
+    },
+    {
+      "amount": 9570.160904744,
+      "quantity": 0.0029128,
+      "transactionType": "SOLD",
+      "transactionStatus": "success",
+      "transactionDate": "2023-11-13",
+      "receiverName": "xyz",
+      "userId": 1,
+      "cryptoId": 1,
+      "coinName": "Bitcoin",
+      "id": 9
+    },
+    {
+      "amount": 5131.62,
+      "quantity": 0.0012575,
+      "transactionType": "Purchased",
+      "transactionStatus": "success",
+      "coinName": "Bitcoin",
+      "transactionDate": "2023-11-13",
+      "receiverName": "xyz",
+      "userId": 1,
+      "cryptoId": 1,
+      "id": 10
+    },
+    {
+      "amount": 4131.583815475,
+      "quantity": 0.0012575,
+      "transactionType": "Sold",
+      "transactionStatus": "success",
+      "transactionDate": "2023-11-13",
+      "receiverName": "xyz",
+      "userId": 1,
+      "cryptoId": 1,
+      "coinName": "Bitcoin",
+      "id": 11
+    },
+    {
+      "amount": 2864.87,
+      "quantity": 0.0005676,
+      "transactionType": "Purchased",
+      "transactionStatus": "success",
+      "coinName": "Bitcoin",
+      "transactionDate": "2023-11-13",
+      "receiverName": "xyz",
+      "userId": 1,
+      "cryptoId": 1,
+      "id": 12
+    },
+    {
+      "amount": 10900,
+      "quantity": 0.0030132,
+      "transactionType": "Purchased",
+      "transactionStatus": "success",
+      "coinName": "Bitcoin",
+      "transactionDate": "2023-11-13",
+      "receiverName": "xyz",
+      "userId": 2,
+      "cryptoId": 1,
+      "id": 13
+    },
+    {
+      "amount": 7643.1,
+      "quantity": 0.0351355,
+      "transactionType": "Purchased",
+      "transactionStatus": "success",
+      "coinName": "Ethereum",
+      "transactionDate": "2023-11-13",
+      "receiverName": "xyz",
+      "userId": 2,
+      "cryptoId": 2,
+      "id": 14
+    },
+    {
+      "amount": 2664.5826838925004,
+      "quantity": 0.012297425,
+      "transactionType": "Sold",
+      "transactionStatus": "success",
+      "transactionDate": "2023-11-13",
+      "receiverName": "xyz",
+      "userId": 2,
+      "cryptoId": 2,
+      "coinName": "Ethereum",
+      "id": 15
+    },
+    {
+      "amount": 21130,
+      "quantity": 0.0061268,
+      "transactionType": "Purchased",
+      "transactionStatus": "success",
+      "coinName": "Bitcoin",
+      "transactionDate": "2023-11-13",
+      "receiverName": "xyz",
+      "userId": 3,
+      "cryptoId": 1,
+      "id": 16
+    },
+    {
+      "amount": 5233.781954170639,
+      "quantity": 0.001592968,
+      "transactionType": "Sold",
+      "transactionStatus": "success",
+      "transactionDate": "2023-11-13",
+      "receiverName": "xyz",
+      "userId": 3,
+      "cryptoId": 1,
+      "coinName": "Bitcoin",
+      "id": 17
+    },
+    {
+      "amount": 6797.36,
+      "quantity": 0.0017645,
+      "transactionType": "Purchased",
+      "transactionStatus": "success",
+      "coinName": "Bitcoin",
+      "transactionDate": "2023-11-13",
+      "receiverName": "xyz",
+      "userId": 3,
+      "cryptoId": 1,
+      "id": 18
+    }
+  ],
+  "cryptos": [
+    {
+      "id": 1,
+      "cryptoName": "Bitcoin",
+      "cryptoSrc": "https://s3-alpha-sig.figma.com/img/3081/886d/bb95f08981a385cf742cbde18bac74e1?Expires=1699228800&Signature=EFt22tLefBzk6yfsMz11hwh5WynE8fQ-ogQPbXXnmlhHb6ckH6zbpJ8akhjL1MBd7JjnWIKbUMY9cjJNCR5NHPoMGYEPBj7kg-WzlyndTKxZtTIs74i0Ws-Rh3F0jpVSyYENwi8-MhxRDu1EFJ47-wE~1QXDAAz1nMOXG2Hjy--CSn1Bu0g7LLurkTXYGkaLWJ3QwW2J1XgiVLMvywp8~Qt1zwLiy-5b~tG5vhY5Fk0DXMfycOJz5d4HCGnV2XM~0yZW4Df4CF-FRLEe6msXBkjWzCEz63Mr3tReIxyClJeIqmxYKROyG9Vfij2WkwVXqtRv27DokPbA8IS~LIYR-A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "totalSupply": "18.8M BTC",
+      "cryptoPrice": 3285553.73,
+      "cryptoChange": "1.06%",
+      "cryptoMarketCap": "$60.1T",
+      "cryptoVolume": "$2.9T",
+      "cryptoLabel": "BTC"
+    },
+    {
+      "id": 2,
+      "cryptoName": "Ethereum",
+      "cryptoSrc": "https://s3-alpha-sig.figma.com/img/4d98/98f1/34ba65c8fe125aa34b85606d353a3805?Expires=1699228800&Signature=N8UtIYYzRNbi1e6a~o9IJ9SllsugRATB3xqCYA9MMOxVBpwdAUQeX7x9YyW7teLxETFUONVZM3wYMBWE8agfwGFR3d0xtPaPmjiiv2zcKmeXnt3hYZJgwg904ycRNOZRyfHMSyZDkxePthpLj4sV3BqRok3hqpSe3pxR8hcXmKQAaVL0xOM-anHialQqyroWc66cUG-TAIVqQRCGz8BYCq4ySCbzb3djJOzhKIHWV5FDq1ZffNH4Dc9pxCbgglG0v4Iwm9qy8Vo6bQrLD0FdMg6lZ6vWqnKceKHFRGULqEiEtrFkL0CjZdsImxeZVy1HqG2YPManHAt6h1vJAZQL3g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "cryptoPrice": 216678.1,
+      "cryptoMarketCap": "$162.92",
+      "cryptoChange": "5.49%",
+      "cryptoVolume": "$11.5T",
+      "totalSupply": "122.60M ETH",
+      "cryptoLabel": "ETH"
+    },
+    {
+      "id": 3,
+      "cryptoName": "Ethereum 2",
+      "cryptoSrc": "https://s3-alpha-sig.figma.com/img/4d98/98f1/34ba65c8fe125aa34b85606d353a3805?Expires=1699228800&Signature=N8UtIYYzRNbi1e6a~o9IJ9SllsugRATB3xqCYA9MMOxVBpwdAUQeX7x9YyW7teLxETFUONVZM3wYMBWE8agfwGFR3d0xtPaPmjiiv2zcKmeXnt3hYZJgwg904ycRNOZRyfHMSyZDkxePthpLj4sV3BqRok3hqpSe3pxR8hcXmKQAaVL0xOM-anHialQqyroWc66cUG-TAIVqQRCGz8BYCq4ySCbzb3djJOzhKIHWV5FDq1ZffNH4Dc9pxCbgglG0v4Iwm9qy8Vo6bQrLD0FdMg6lZ6vWqnKceKHFRGULqEiEtrFkL0CjZdsImxeZVy1HqG2YPManHAt6h1vJAZQL3g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "cryptoPrice": 216678.1,
+      "cryptoChange": "-5.49%",
+      "cryptoMarketCap": "$4.6T",
+      "cryptoVolume": "$11.5T",
+      "totalSupply": "122.60M ETH2",
+      "cryptoLabel": "ETH2"
+    },
+    {
+      "id": 4,
+      "cryptoName": "Tether",
+      "cryptoSrc": "https://s3-alpha-sig.figma.com/img/dbf9/7004/d398f553f70e80bb4ee7cd586c2ed10a?Expires=1699228800&Signature=WAqIE1httKqERNQHWv1GREH5F8Rak0kz2O7GfZgdcxHfbaJWagpT10x4Gu92~Qyp3TQZJagFvad6g80dqS99FiOWfCZMCuvkmb6zMNpqqnmOEjfuBz3ca132ellqI7QWPjJXHpVRvVMToTGb8rEWGbLZlIu4YjM663PVWdgzYcJtBWuScfBExdyqbWwPfEbmy5jo4wJd677XU0DwzXQBMxmBKImurmuvMLG8SD6KhkDdfSvnqSdYizEtXvTYxu1FutWnDj2hTnShiokuMGOOi2f7J6cVTTDD-5XL81h~S1N5NWXlyBThcUdwPHOBNxoBO4YkZbzA9dV1SSBYhr1P8A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "cryptoPrice": 74.31,
+      "cryptoChange": 0.11,
+      "cryptoMarketCap": "$4.6T",
+      "cryptoVolume": "$11.5T",
+      "totalSupply": "122.60M USDT",
+      "cryptoLabel": "THR"
+    },
+    {
+      "id": 5,
+      "cryptoName": "Bitcoin Coin",
+      "cryptoSrc": "https://s3-alpha-sig.figma.com/img/be97/4d92/45f248c7414ced72e0a5a21215c6f7d2?Expires=1699228800&Signature=heFiKz--8c2QiNd609tqiZRQj4sK0O84r39F5NRA-bBazeZsSTVcurSE0nE3PEVETI1A-H4uSabNYIaq68tcCM--qpWbQ7exqQKAhY5qUMD3XdfjQ9hXezhYhgPtbIMXe9eRkfaxRH9NOoBUKtT71-2D44-SaeZHAoZiDtdoepUfSv4lyy9gh7UYYnUlgs2m~20iMa5Ve78kDvngKDtmGHEx8762EL82AObPRmtRc4cBfTEGyroP7vxz02OLc-bv~wn0zuPVlfV63GlvduvZFN5nuntcPquqZcNoUzR4VtuECNe9SG1KvXwV6XI86kSSCVtI7Y1umBLrLjSWhzL7Dg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "cryptoPrice": 24942.54,
+      "cryptoChange": -3.69,
+      "cryptoMarketCap": "$4.2T",
+      "cryptoVolume": "$11.5T",
+      "totalSupply": "122.60M BNB",
+      "cryptoLabel": "BTTC"
+    },
+    {
+      "id": 6,
+      "cryptoName": "Cardano",
+      "cryptoSrc": "https://s3-alpha-sig.figma.com/img/dc38/4215/8322651cd7382a66c07867c5a9094cb1?Expires=1699228800&Signature=fejLpzpg4mdNq8TNAfVIj5ShCwzMLD0B3HhAG3xkkALWOs5YvL2eonRfJ~NFyTCAxWJGUiuusG2rAPp4nBjMOStR14HyQzZLqJMLn64tRxJ6HLv9SlKTd8rqPp44InJVgxz6kbtlr1ifEuouelu~uPZS233RmqPrTwD9MfceCdYjOIlgDtoq7LPdMSwbF0aqhXJ88kjnSN~MvfACaQWUv6d1DBvnkGsW6KGMxHUBmogJcX7TOHrF1X2GiKlgYXih0oGsGeQ6iJS2ctWb6sN6utC1hq~UNEnk2yCvLnVfGUNuO86hBBMit2HR8XKReYpPpKQ8ErDznbQFjqNPDNpawQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "cryptoPrice": 104.52,
+      "cryptoChange": -1.82,
+      "cryptoMarketCap": "$3.4T",
+      "cryptoVolume": "$11.5T",
+      "totalSupply": "122.60M ADA",
+      "cryptoLabel": "CDO"
+    },
+    {
+      "id": 7,
+      "cryptoName": "XRP",
+      "cryptoSrc": "https://s3-alpha-sig.figma.com/img/5800/3071/d5972990118c295009af18e41553e00c?Expires=1699228800&Signature=Zwri6LyI8BLbcIeHbmT5ZwDBUlHs6hcM-h8OLd4UHIjFRaHUVFU4TkIWgLTwHtkFwCjSJyx-0l0N1aiIq8dcOQq6ohIBA1zSqlFNd9IofS3AExUG3gydXkeFy9C~Ad3ILkar2KM26EgP9EGFf4c~QJOeSlJXqqxhXYpiUG7s~rKH32c-sBrpT4D4JLK1mn3iwWYRMgu~MckVFOttAMOpifpe4Y5CBN2AscC3JJRiOnYzzaOxjOwOnBN5Z6KKKaAL9YP9QWktPVaDl~8T-PAfcgPYv8iassWNpZD9JYHRm4JlvJZHsJT0tym0wAFCuxg6hQBi1t6xYVCmYcw2T8rjsg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "cryptoPrice": 57.21,
+      "cryptoChange": 1.11,
+      "cryptoMarketCap": "$2.7T",
+      "cryptoVolume": "$11.5T",
+      "totalSupply": "122.60M XRP",
+      "cryptoLabel": "XRP"
+    },
+    {
+      "id": 8,
+      "cryptoName": "Dodge Coin",
+      "cryptoSrc": "https://s3-alpha-sig.figma.com/img/f7e5/381b/c9a0556c959c005ad6dc9280647dc84c?Expires=1699228800&Signature=U1GWsW2TwoHUz9CyYAfcD3SuhmBW9LWFY3-bmMkHA8fir0mzMvOUJLGK-F1HoObn7LvFBOkI4lFxP8PmvZUpbuJ9s3OaVSu4XC2KbM9gb4imTvSKs7YIT0Q01tg9cAyAJm7D2-7a1TIGEnhNizPVO7ecwV9y7EMgVBldiBOTH5Y37FfNPK3CfdubhtRVPMhBFvgP9lwlEtZ19Jbzx--zYDACvuQHT3kbblw88jTN~fEK888Z-mIrtUzgbw6n0VmJ2Mf9vQqb4gWXrSspcaq2qOMb7KQr1-a8o7nBp-oJG8pV5uiHM2dBOBW~OyFc-dXMdOnLvZxplOW~XBWev~MfAQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "cryptoPrice": 17.64,
+      "cryptoChange": -6.96,
+      "cryptoMarketCap": "$2.3T",
+      "cryptoVolume": "$11.5T",
+      "totalSupply": "122.60M XRP",
+      "cryptoLabel": "DGC"
+    },
+    {
+      "id": 9,
+      "cryptoName": "USD Coin",
+      "cryptoSrc": "https://s3-alpha-sig.figma.com/img/c3f7/dc1b/e7613454b376b19d58f4002d1b05bb26?Expires=1699228800&Signature=XzT1FTAo2~eOU~1D1RyIQeDAQ8BEDDVQ5eFMg74z1y748Kds6tHM~MVzolM8u9SY4pRAN1G4HDFBX3ginigTvr7XXdhWaJyTRQirv2dSwkLvKHIe4wc~s-gb4GA0~CFnmHT5vNqt6d2VPKJvW6WZAKZ~Au14H2WBz0QZzvr~V75AiUYhEbo6wRzC5-MEyijTWAOu82bgsSJ-oLkKp-Tqziq9HsIXnNOsVLG6cKFt7k9wH8ay1QwBE2mG6sD62qH1HAf3Yai8SGOZVeB-3O0IS-j6PwDs57ZNPYo1MpPZb-x2UmoocIn2F85ZbaLcQYAvrB-AcJyOKaTfcuRGrPda0w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "cryptoPrice": 74.26,
+      "cryptoChange": 1.01,
+      "cryptoMarketCap": "$2.1T",
+      "cryptoVolume": "$11.5T",
+      "totalSupply": "122.60M XRP",
+      "cryptoLabel": "USD"
+    }
+  ]
+}

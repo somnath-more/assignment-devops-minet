@@ -7,7 +7,7 @@
 #      url: jdbc:mysql://localhost:3306/minet_bc_128_transaction
 #      driver-class: com.mysql.cj.jdbc.Driver
 #      username: root
-#      password: SandyZemosoID@1
+#      password: password
 #    jpa:
 #      hibernate:
 #        ddl-auto: update

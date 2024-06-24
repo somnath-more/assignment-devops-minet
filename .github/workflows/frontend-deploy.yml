@@ -1,0 +1,76 @@
+name: Frontend Deployment
+on:
+    push:
+      branches:
+        - "deployment"
+      paths:
+        - "frontend/**"
+        - ".github/workflows/frontend-deploy.yml"
+
+jobs:
+    frontend-build:
+        runs-on: ubuntu-latest
+        timeout-minutes: 8
+        defaults:
+            run:
+                working-directory: frontend/
+        steps:
+            - name: checkout repository
+              uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
+            - name: setup node
+              uses: actions/setup-node@v3
+              with:
+                node-version: 20
+            - name: caching node modules
+              uses: actions/cache@v3
+              id: cache
+              with:
+                path: frontend/node_modules
+                key: ${{ runner.os }}-frontend-node_modules-${{ hashFiles('frontend/package.json') }}
+        
+            - name: install dependencies
+              if: steps.cache.outputs.cache-hit !=true
+              run: npm install
+            
+            - name: create env file giving credentials for authO
+              run: |
+                  echo "CLIENTID=${{ secrets.CLIENTID }}" >>.env
+                  echo "DOMAIN=${{ secrets.DOMAIN }}" >>.env
+
+            - name: build the frontend 
+              run: npm run build
+
+            - name: Login to GHCR registry
+              uses: docker/login-action@v2
+              with:
+                  registry: ghcr.io
+                  username: ${{ github.actor }}
+                  password: ${{ secrets.PAT_TOKEN }}
+
+            - name: Build and push
+              uses: docker/build-push-action@v3
+              with:
+                  context: frontend/
+                  push: true
+                  tags: |
+                    ghcr.io/${{ github.actor }}/bc128-minet-fe:latest
+                    ghcr.io/${{ github.actor }}/bc128-minet-fe:${{github.sha}}
+
+             
+              
+            # - name: configure aws
+            #   uses: aws-actions/configure-aws-credentials@v2
+            #   with:
+            #      aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            #      aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            #      aws-region: us-east-2
+                      
+            # - name: update kubeconfig
+            #   run: aws eks update-kubeconfig --name ${{ secrets.CLUSTER_NAME }}
+            # - name: update the frontend image
+            #   run: kubectl set image deployment/frontend frontend-pod=ghcr.io/${{ env.GITHUB_USER }}/bc109-fe:v${{ github.run_number }}
+            # - name: remove the kubeconfig file
+            #   run: rm ~/.kube -rf
+            

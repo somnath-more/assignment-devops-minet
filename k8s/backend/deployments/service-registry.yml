@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: service-registry
+spec:
+   replicas: 1
+   selector:
+      matchLabels:
+         app: service-registry
+         project: bc128-minet
+   template:
+      metadata:
+         labels:
+            app: service-registry
+            project: bc128-minet
+      spec:
+         containers:
+            - name: service-registry
+              image: ghcr.io/somnath-more/bc128-minet-be-service-registry:latest
+              imagePullPolicy: Always
+              ports:
+               - containerPort: 8761
+              env:
+               - name: EUREKA_INSTANCE_HOSTNAME
+                 value: "service-registry"
+               - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
+                 value: "http://discovery-service:8761/eureka/"
+        
+         imagePullSecrets:
+            - name: ghcr-secret

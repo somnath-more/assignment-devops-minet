@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: headless-svc
+spec:
+  selector:
+      app: headless-svc
+      project: bc128-minet
+  ports:
+  - port: 80
+    name: database-sts
+  clusterIP: None   # Headless service 

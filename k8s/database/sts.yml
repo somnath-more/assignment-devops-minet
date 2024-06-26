@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: database-sts
+spec:
+  serviceName: "headless-svc"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: database-sts
+      project: bc128-minet
+  template:
+    metadata:
+      labels:
+        app: database-sts
+        project: bc128-minet
+    spec:
+      containers:
+        - name: mysql-database
+          image: mysql:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3306
+          envFrom:
+            - secretRef:
+                name: mysql-secret
+          volumeMounts:
+            - name: persist-database
+              mountPath: /var/lib/mysql
+  volumeClaimTemplates:
+    - metadata:
+        name: persist-database
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        resources:
+          requests:
+            storage: 2Gi
+        storageClassName: gp2

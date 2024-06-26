@@ -6,7 +6,9 @@ on:
       paths:
         - "frontend/**"
         - ".github/workflows/frontend-deploy.yml"
-
+permissions:
+    id-token: write
+    contents: read
 jobs:
     frontend-build:
         runs-on: ubuntu-latest
@@ -58,19 +60,18 @@ jobs:
                     ghcr.io/${{ github.actor }}/bc128-minet-fe:latest
                     ghcr.io/${{ github.actor }}/bc128-minet-fe:${{github.sha}}
 
-             
-              
-            # - name: configure aws
-            #   uses: aws-actions/configure-aws-credentials@v2
-            #   with:
-            #      aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            #      aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            #      aws-region: us-east-2
+                   
+            - name: configure aws
+              uses: aws-actions/configure-aws-credentials@v1
+              with:
+                 aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                 aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                 aws-region: us-east-2
                       
-            # - name: update kubeconfig
-            #   run: aws eks update-kubeconfig --name ${{ secrets.CLUSTER_NAME }}
-            # - name: update the frontend image
-            #   run: kubectl set image deployment/frontend frontend-pod=ghcr.io/${{ env.GITHUB_USER }}/bc109-fe:v${{ github.run_number }}
-            # - name: remove the kubeconfig file
-            #   run: rm ~/.kube -rf
+            - name: update kubeconfig
+              run: aws eks --region us-east-2 update-kubeconfig --name ${{ secrets.CLUSTER_NAME }}
+            - name: update the frontend image
+              run: kubectl set image deployment/minet-frontend minet-frontend-pod=ghcr.io/${{ github.actor }}/bc128-minet-fe:${{github.sha}}
+            - name: remove the kubeconfig file
+              run: rm ~/.kube -rf
             

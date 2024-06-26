@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: minet-frontend
+spec:
+   replicas: 1
+   selector:
+      matchLabels:
+         app: minet-frontend
+         project: bc128-minet
+   template:
+      metadata:
+         labels:
+            app: minet-frontend
+            project: bc128-minet
+      spec:
+         containers:
+            - name: minet-frontend-pod
+              image: ghcr.io/somnath-more/bc128-minet-fe:latest
+              imagePullPolicy: Always
+              ports:
+               - containerPort: 80
+              env:
+              #  - name: DOMAIN
+              #    value: "dev-7fn8jjj51tzy3flk.us.auth0.com"
+              #   - name: CLIENTID
+              #     value: "Tf9dEDqlNaPMDubl8oi4tYyBCccSl5Nj"
+                - name: SPRING_BACKEND_URL 
+                  value: "http://localhost:9191/api/v1/"
+  
+         imagePullSecrets:
+            - name: ghcr-secret

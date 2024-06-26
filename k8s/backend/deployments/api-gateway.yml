@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: api-gateway
+spec:
+   replicas: 1
+   selector:
+      matchLabels:
+         app: api-gateway
+         project: bc128-minet
+   template:
+      metadata:
+         labels:
+            app: api-gateway
+            project: bc128-minet
+      spec:
+         containers:
+            - name: api-gateway
+              image: ghcr.io/somnath-more/bc128-minet-be-api-gateway:latest
+              imagePullPolicy: Always
+              ports:
+               - containerPort: 9191
+              env:
+               - name: EUREKA_INSTANCE_HOSTNAME
+                 value: "api-gateway"
+               - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
+                 value: "http://discovery-service:8761/eureka/"
+    
+         imagePullSecrets:
+            - name: ghcr-secret

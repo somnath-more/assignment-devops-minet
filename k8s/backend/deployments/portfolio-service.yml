@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: portfolio-service
+spec:
+   replicas: 1
+   selector:
+      matchLabels:
+         app: portfolio-service
+         project: bc128-minet
+   template:
+      metadata:
+         labels:
+            app: portfolio-service
+            project: bc128-minet
+      spec:
+         containers:
+            - name: portfolio-service
+              image: ghcr.io/somnath-more/bc128-minet-be-portfolio-service:latest
+              imagePullPolicy: Always
+              ports:
+               - containerPort: 9093
+              env:
+                - name: EUREKA_INSTANCE_HOSTNAME
+                  value: portfolio-service
+                - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
+                  value: http://discovery-service:8761/eureka/
+                - name: SPRING_DATASOURCE_URL 
+                  value: jdbc:mysql://18.188.123.194:32000/minet_bc_128_transaction?useSSL=false&serverTimezone=UTC
+                - name: SPRING_DATASOURCE_PASSWORD
+                  value: "password"
+         imagePullSecrets:
+            - name: ghcr-secret

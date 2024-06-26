@@ -6,6 +6,7 @@ spec:
   type: NodePort
   ports:
     - port: 8761
+      targetPort: 8761
       nodePort: 32761
   selector:
     app: service-registry

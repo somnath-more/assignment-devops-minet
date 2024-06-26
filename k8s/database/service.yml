@@ -10,4 +10,5 @@ spec:
   ports:
     - port: 3306
       targetPort: 3306
-      nodePort: 32000  # You can specify a port number between 30000-32767
+      nodePort: 32000  # You can specify a port number between 30000-32767  eg. nodeip:32000
+ 

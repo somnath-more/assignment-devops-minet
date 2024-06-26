@@ -52,4 +52,4 @@ eureka:
     fetch-registry: true
     serviceUrl:
       defaultZone: http://18.188.123.194:32761/eureka/
-    instance: 18.188.123.194:
+    instance: 18.188.123.194

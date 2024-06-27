@@ -26,7 +26,7 @@ spec:
               #   - name: CLIENTID
               #     value: "Tf9dEDqlNaPMDubl8oi4tYyBCccSl5Nj"
                 - name: SPRING_BACKEND_URL 
-                  value: "http://localhost:9191/api/v1/"
+                  value: "http://18.188.123.194:30091/api/v1/"
   
          imagePullSecrets:
             - name: ghcr-secret

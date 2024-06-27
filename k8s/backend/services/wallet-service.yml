@@ -5,6 +5,7 @@ metadata:
 spec:
   ports:
     - port: 9094
+      targetPort: 9094
   selector:
     app: wallet-service
     project: bc128-minet

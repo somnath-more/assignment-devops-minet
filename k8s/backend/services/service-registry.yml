@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: service-registry
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
     - port: 8761
       targetPort: 8761
-      nodePort: 32761
   selector:
     app: service-registry
     project: bc128-minet

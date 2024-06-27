@@ -35,7 +35,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: http://18.188.123.194:32761/eureka/
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE}
       instanceInfoReplicationIntervalSeconds: 10
     instace:
-      hostname: 18.188.123.194
+      hostname: ${EUREKA_INSTANCE_HOSTNAME}

@@ -5,6 +5,7 @@ metadata:
 spec:
   ports:
     - port: 9091
+      targetPort: 9091
   selector:
     app: user-service
     project: bc128-minet

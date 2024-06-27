@@ -24,7 +24,8 @@ spec:
                - name: EUREKA_INSTANCE_HOSTNAME
                  value: "service-registry"
                - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
-                 value: "http://discovery-service:8761/eureka/"
+                 value:  http://service-registry:8761/eureka/
+
         
          imagePullSecrets:
             - name: ghcr-secret

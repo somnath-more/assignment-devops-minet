@@ -24,7 +24,8 @@ spec:
                 - name: EUREKA_INSTANCE_HOSTNAME
                   value: portfolio-service
                 - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
-                  value: http://discovery-service:8761/eureka/
+                  value:  http://service-registry:8761/eureka/
+
                 - name: SPRING_DATASOURCE_URL 
                   value: jdbc:mysql://18.188.123.194:32000/minet_bc_128_transaction?useSSL=false&serverTimezone=UTC
                 - name: SPRING_DATASOURCE_PASSWORD

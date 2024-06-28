@@ -8,10 +8,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - ab7e6257443c141908792201424ad4b9-1829274389.us-east-2.elb.amazonaws.com
+        - bc-128-fe.play-nooax-ai-with.me
       # secretName: letsencrypt-secret
   rules:
-  - host: ab7e6257443c141908792201424ad4b9-1829274389.us-east-2.elb.amazonaws.com
+  - host: bc-128-fe.play-nooax-ai-with.me
     http:
       paths:
       - pathType: Exact

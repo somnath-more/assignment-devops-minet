@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: aee6b21ed1109486a8ebe12cea4d6d6f-e1437e662e1786eb.elb.us-east-2.amazonaws.com
+    - host: bc-128-be.play-nooax-ai-with.me
       http:
         paths:
         - path: /$

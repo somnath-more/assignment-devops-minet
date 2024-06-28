@@ -3,11 +3,9 @@ kind: Service
 metadata:
   name: api-gateway
 spec:
-  type: NodePort
   ports:
     - port: 9191
       targetPort: 9191
-      nodePort: 30091
   selector:
     app: api-gateway
     project: bc128-minet

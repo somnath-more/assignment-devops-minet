@@ -982,7 +982,8 @@ export const USER_CREDENTIALS = {
 };
 
 // export const BASE_URL = 'https://bc128be.spcluster.tk/api/v1';
-export const BASE_URL = 'http://18.188.123.194:30091/api/v1';
+export const BASE_URL =
+  'http://aee6b21ed1109486a8ebe12cea4d6d6f-e1437e662e1786eb.elb.us-east-2.amazonaws.com/api/v1';
 export const COIN_GECKO_BASE_URL = 'https://api.coingecko.com/api/v3';
 
 export const TRADE = 'Trade';

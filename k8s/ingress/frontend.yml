@@ -14,10 +14,12 @@ spec:
   - host: ab7e6257443c141908792201424ad4b9-1829274389.us-east-2.elb.amazonaws.com
     http:
       paths:
-      - pathType: Prefix
+      - pathType: Exact
         path: /
         backend:
           service:
-            name: frontend-service
+            name: frontend-service    
             port:
               number: 80
+
+              # ingress:8080  svc port 8080: containerPort: 80

@@ -20,13 +20,7 @@ spec:
               imagePullPolicy: Always
               ports:
                - containerPort: 80
-              env:
-              #  - name: DOMAIN
-              #    value: "dev-7fn8jjj51tzy3flk.us.auth0.com"
-              #   - name: CLIENTID
-              #     value: "Tf9dEDqlNaPMDubl8oi4tYyBCccSl5Nj"
-                - name: SPRING_BACKEND_URL 
-                  value: "http://18.188.123.194:30091/api/v1/"
+
   
          imagePullSecrets:
             - name: ghcr-secret

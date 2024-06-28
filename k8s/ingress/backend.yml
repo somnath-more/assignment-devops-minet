@@ -1,0 +1,35 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: backend
+  labels:
+    name: backend
+  annotations:
+    nginx.ingress.kubernetes.io/use-regex: "true"
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: aee6b21ed1109486a8ebe12cea4d6d6f-e1437e662e1786eb.elb.us-east-2.amazonaws.com
+      http:
+        paths:
+        - path: /$
+          pathType: Exact
+          backend:
+            service:
+              name: service-registry
+              port:
+                number: 8761
+        - path: /eureka
+          pathType: Prefix
+          backend:
+            service:
+              name: service-registry
+              port:
+                number: 8761
+        - path: / 
+          pathType: Prefix
+          backend:
+            service:
+              name: api-gateway
+              port:
+                number: 9191

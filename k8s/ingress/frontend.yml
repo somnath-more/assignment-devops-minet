@@ -6,15 +6,15 @@ metadata:
   #  cert-manager.io/cluster-issuer: "letsencrypt"
 spec:
   ingressClassName: nginx
-  tls:
-    - hosts:
-        - bc-128-fe.play-nooax-ai-with.me
-      # secretName: letsencrypt-secret
+  # tls:
+  #   - hosts:
+  #       - bc-128-fe.play-nooax-ai-with.me
+  #     # secretName: letsencrypt-secret
   rules:
   - host: bc-128-fe.play-nooax-ai-with.me
     http:
       paths:
-      - pathType: Exact
+      - pathType: ImplementationSpecific
         path: /
         backend:
           service:

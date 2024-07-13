@@ -11,7 +11,7 @@ spec:
   #       - bc-128-fe.play-nooax-ai-with.me
   #     # secretName: letsencrypt-secret
   rules:
-  - host: bc-128-fe.play-nooax-ai-with.me
+  - host: bc-128-fe.codemaya.in
     http:
       paths:
       - pathType: ImplementationSpecific

@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: bc-128-be.play-nooax-ai-with.me
+    - host: bc-128-be.codemaya.in
       http:
         paths:
         - path: /$

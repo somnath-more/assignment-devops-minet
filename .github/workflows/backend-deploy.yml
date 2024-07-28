@@ -60,6 +60,7 @@ jobs:
           tags: |
              ghcr.io/${{ github.actor }}/bc128-minet-be-${{ matrix.service }}:v${{ github.run_number }}
              ghcr.io/${{ github.actor }}/bc128-minet-be-${{ matrix.service }}:latest
+             
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:

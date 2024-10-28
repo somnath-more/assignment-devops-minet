@@ -36,10 +36,10 @@ jobs:
               if: steps.cache.outputs.cache-hit !=true
               run: npm install
             
-            - name: create env file giving credentials for authO
-              run: |
-                  echo "CLIENTID=${{ secrets.CLIENTID }}" >>.env
-                  echo "DOMAIN=${{ secrets.DOMAIN }}" >>.env
+            # - name: create env file giving credentials for authO
+            #   run: |
+            #       echo "CLIENTID=${{ secrets.CLIENTID }}" >>.env
+            #       echo "DOMAIN=${{ secrets.DOMAIN }}" >>.env
 
             - name: build the frontend 
               run: npm run build

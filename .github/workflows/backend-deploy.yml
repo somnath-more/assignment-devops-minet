@@ -61,22 +61,22 @@ jobs:
              ghcr.io/${{ github.actor }}/bc128-minet-be-${{ matrix.service }}:v${{ github.run_number }}
              ghcr.io/${{ github.actor }}/bc128-minet-be-${{ matrix.service }}:latest
              
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-2
+      # - name: Configure AWS Credentials
+      #   uses: aws-actions/configure-aws-credentials@v1
+      #   with:
+      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #     aws-region: us-east-2
      
-      - name: Adding EKS cluster and Build and Deploy the service
-        env: 
-          aws_region: us-east-2
-          cluster_name: ${{ secrets.CLUSTER_NAME }}
-          SERVICE_NAME: ${{ matrix.service }}
-        run: |
-              aws eks --region us-east-2 update-kubeconfig --name ${{ secrets.CLUSTER_NAME }}
-              kubectl set image deployment/${SERVICE_NAME} ${SERVICE_NAME}=ghcr.io/${{ github.actor }}/bc128-minet-be-${{ matrix.service }}:latest
-      - name: remove kubeconfig file
-        run: |
-          ls ~/.kube
-          rm -rf ~/.kube
+      # - name: Adding EKS cluster and Build and Deploy the service
+      #   env: 
+      #     aws_region: us-east-2
+      #     cluster_name: ${{ secrets.CLUSTER_NAME }}
+      #     SERVICE_NAME: ${{ matrix.service }}
+      #   run: |
+      #         aws eks --region us-east-2 update-kubeconfig --name ${{ secrets.CLUSTER_NAME }}
+      #         kubectl set image deployment/${SERVICE_NAME} ${SERVICE_NAME}=ghcr.io/${{ github.actor }}/bc128-minet-be-${{ matrix.service }}:latest
+      # - name: remove kubeconfig file
+      #   run: |
+      #     ls ~/.kube
+      #     rm -rf ~/.kube

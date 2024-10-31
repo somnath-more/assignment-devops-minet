@@ -982,7 +982,7 @@ export const USER_CREDENTIALS = {
 };
 
 // export const BASE_URL = 'https://bc128be.spcluster.tk/api/v1';
-export const BASE_URL = 'http://localhost:9191/api/v1';
+export const BASE_URL = 'http://3.144.212.170:9191/api/v1';
 export const COIN_GECKO_BASE_URL = 'https://api.coingecko.com/api/v3';
 
 export const TRADE = 'Trade';

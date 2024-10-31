@@ -17,6 +17,7 @@ const App = () => {
 
   return (
     <div>
+      <p>This is a Minet application. - {process.env.name}</p>
       <Routes>
         <Route path="/sign-up" element={<SignUpPage />} />
         <Route path="/login" element={<SignInPage />} />
